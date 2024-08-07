@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/sap/opu/odata/vwks/NLP_EBON_ARCHIVE_MANAGE_SRV/$metadata">
+		<edmx:Include Alias="NLP_EBON_ARCHIVE_MANAGE_SRV" Namespace="NLP_EBON_ARCHIVE_MANAGE_SRV"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm"
+			Namespace="vwks.nlp.s2p.mm.ebon.archive.display.NLP_EBON_ARCHIVE_MANAGE_SRV">
+			<!--===============================================================================
+                Entity Type from chosen collection 
+                ================================================================================-->
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

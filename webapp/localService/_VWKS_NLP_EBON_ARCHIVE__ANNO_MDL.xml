@@ -1,0 +1,469 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/></edmx:Reference>
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='X31205')/$value"><edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/></edmx:Reference>
+	<edmx:Reference Uri="../../../vwks/nlp_ebon_archive_manage_srv/$metadata"><edmx:Include Namespace="NLP_EBON_ARCHIVE_MANAGE_SRV" Alias="SAP"/></edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="com.sap.vwks.nlp_ebon_archive__anno_mdl.v1">
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_CNDTPType/guid"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_CNDTPType/parent_guid"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_CNDTPType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="General Information"/><PropertyValue Property="ID" String="ConditionDetails"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ConditionDeatils"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="ConditionDeatils">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Valid From"/><PropertyValue Property="Value" Path="conditionvaliditystartdate"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Valid To"/><PropertyValue Property="Value" Path="conditionvalidityenddate"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="conditionapplication"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Condition Type"/><PropertyValue Property="Value" Path="conditiontype"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="procmthubplantuniqueid"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="conditioncalculationtype"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Condition Amount"/><PropertyValue Property="Value" Path="conditionratevalue"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Pricing Unit"/><PropertyValue Property="Value" Path="conditionquantity"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="baseunit"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="conditionlowerlimit"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="conditionupperlimit"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="additionalvaluedays"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fixedvaluedate"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="minimumconditionbasisvalue"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="maximumconditionbasisvalue"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="maximumconditionamount"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Change Reason"/><PropertyValue Property="Value" Path="conditionchangereason"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="PricingEngineIsEnabled"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="EBON Document Condition"/><PropertyValue Property="TypeNamePlural" String="EBON Document Conditions"/>
+						<PropertyValue Property="Title">
+							<Record Type="UI.DataField"><PropertyValue Property="Label" String="Ebon Document Condition"/><PropertyValue Property="Value" Path="conditionrecord"/></Record>
+						</PropertyValue>
+						<PropertyValue Property="Description">
+							<Record Type="UI.DataField"><PropertyValue Property="Value" Path="conditionrecord"/></Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Valid From"/><PropertyValue Property="Value" Path="conditionvaliditystartdate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Condition Type"/><PropertyValue Property="Value" Path="conditiontype"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Valid To"/><PropertyValue Property="Value" Path="conditionvalidityenddate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Condition Amount"/><PropertyValue Property="Value" Path="conditionratevalue"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Pricing Unit"/><PropertyValue Property="Value" Path="conditionquantity"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Change Reason"/><PropertyValue Property="Value" Path="conditionchangereason"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/guid"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/SupplierName"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/CompanyCodeName"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/PurchasingOrganizationName"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/PurchasingGroupName"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/CurrencyName"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/purchasingdocumentsubtype"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/ProcessIndicatorText"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/AlternativePartsText"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/BCSString_VWKS"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/supplier"><Annotation Term="Common.SemanticObject" String="Supplier"/>
+				<Annotation Term="Common.Text" Path="SupplierName"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/></Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/companycode">
+				<Annotation Term="Common.Text" Path="CompanyCodeName"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/></Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/purchasingorganization">
+				<Annotation Term="Common.Text" Path="PurchasingOrganizationName"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/></Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/purchasinggroup">
+				<Annotation Term="Common.Text" Path="PurchasingGroupName"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/></Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/currency">
+				<Annotation Term="Common.Text" Path="CurrencyName"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/></Annotation>
+			</Annotations><Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/createdbyuser"/><Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/purchasecontracttype"/>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType/AlternativeParts">
+				<Annotation Term="Common.Text" Path="AlternativePartsText"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_HDRTPType">
+				<Annotation Term="UI.DataPoint" Qualifier="purchasingorganization">
+					<Record><PropertyValue Property="Value" Path="purchasingorganization"/><PropertyValue Property="Title" String="Central Purchasing Organization"/></Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="supplier">
+					<Record><PropertyValue Property="Value" Path="supplier"/><PropertyValue Property="Title" String="Supplier"/></Record>
+				</Annotation>
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="General Information"/><PropertyValue Property="ID" String="GeneralInformation"/>
+							<PropertyValue Property="Facets">
+								<Collection>
+									<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Basic Data"/><PropertyValue Property="ID" String="BasicData"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#BasicData"/></Record>
+									<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Purchasing"/><PropertyValue Property="ID" String="OrgId"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Purchasing"/></Record>
+									<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Supplier"/><PropertyValue Property="ID" String="SupplierId"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Supplier"/></Record>
+									<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Delivery and Payment"/><PropertyValue Property="ID" String="PaymentTerms"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Delivery"/></Record>
+								</Collection>
+							</PropertyValue><Annotation Term="UI.IsSummary" Bool="true"/></Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Items"/><PropertyValue Property="ID" String="Items"/><PropertyValue Property="Target" AnnotationPath="to_Item/@UI.LineItem"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="ApprovalInfo">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Delta Value"/><PropertyValue Property="Value" Path="DeltaValue"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="BasicData">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="purchasingdocumentname"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="purchasecontracttype"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="creationdate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="validitystartdate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="validityenddate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="User Id"/><PropertyValue Property="Value" Path="createdbyuser"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="CompanyCode">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="companycode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue><PropertyValue Property="Label" String="Purchasing"/></Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="IncoTerms">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Shipping Instruction"/><PropertyValue Property="Value" Path="ShippingInstruction"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="Purchasing">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Central Purchasing Organization"/><PropertyValue Property="Value" Path="purchasingorganization"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Central Purchasing Group"/><PropertyValue Property="Value" Path="purchasinggroup"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Unlimited Value"/><PropertyValue Property="Value" Path="UnlimitedValue"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Currency"/><PropertyValue Property="Value" Path="currency"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Until Revoked"/><PropertyValue Property="Value" Path="Revoked"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Responsible Purchaser"/><PropertyValue Property="Value" Path="RespPurchaser"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="ZSB Indicator"/><PropertyValue Property="Value" Path="ZSBIndicator"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Immediate Output"/><PropertyValue Property="Value" Path="ImmediateOutput"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Leading Company Code"/><PropertyValue Property="Value" Path="LeadingCompanyCode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Alternative Parts"/><PropertyValue Property="Value" Path="AlternativeParts"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Alternative Parts Check"/><PropertyValue Property="Value" Path="AlternativePartsCheck"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue><PropertyValue Property="Label" String="Purchasing"/></Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="Supplier">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="supplier"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Automated"/><PropertyValue Property="Value" Path="AutomationFlag"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Process Indicator"/><PropertyValue Property="Value" Path="ProcessIndicator"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Reminder Days"/><PropertyValue Property="Value" Path="ReminderDays"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Automation Limit"/><PropertyValue Property="Value" Path="AutomationLimit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue><PropertyValue Property="Label" String="ProcessIndicator"/></Record>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="EBON Document"/><PropertyValue Property="TypeNamePlural" String="EBON Documents"/></Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Central Purchase Contract Description"/><PropertyValue Property="Value" Path="purchasingdocumentname"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="creationdate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Valid From"/><PropertyValue Property="Value" Path="validitystartdate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Valid To"/><PropertyValue Property="Value" Path="validityenddate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="supplier"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Until Revoked"/><PropertyValue Property="Value" Path="Revoked"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Valid From"/><PropertyValue Property="Value" Path="validitystartdate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Valid To"/><PropertyValue Property="Value" Path="validityenddate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Responsible Purchaser"/><PropertyValue Property="Value" Path="RespPurchaser"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Predecessor Material"/><PropertyValue Property="Value" Path="PredMaterial"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="ZSB Indicator"/><PropertyValue Property="Value" Path="ZSBIndicator"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Alternative Parts"/><PropertyValue Property="Value" Path="AlternativeParts"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Blocking Reason"/><PropertyValue Property="Value" Path="BCSText_VWKS"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Alternative Parts Check"/><PropertyValue Property="Value" Path="AlternativePartsCheck"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>supplier</PropertyPath>
+						<PropertyPath>purchasingorganization</PropertyPath>
+						<PropertyPath>purchasinggroup</PropertyPath>
+						<PropertyPath>RespPurchaser</PropertyPath>
+						<PropertyPath>PredMaterial</PropertyPath>
+						<PropertyPath>ZSBIndicator</PropertyPath>
+						<PropertyPath>AlternativeParts</PropertyPath>
+						<PropertyPath>BCSText_VWKS</PropertyPath>
+						<PropertyPath>AlternativePartsCheck</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_ITMTPType/guid"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_ITMTPType/parent_guid"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_ITMTPType/MaterialGroupName"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_ITMTPType/plant"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.xVWKSxNLP_C_EBON_ITMTPType">
+				<Annotation Term="UI.DataPoint" Qualifier="InterimPrice">
+					<Record><PropertyValue Property="Value" Path="InterimPrice"/><PropertyValue Property="Title" String="Interim Price"/></Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="OptionalItem">
+					<Record><PropertyValue Property="Value" Path="OptionalItem"/><PropertyValue Property="Title" String="OptionalItem"/></Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="targetquantity">
+					<Record><PropertyValue Property="Value" Path="targetquantity"/><PropertyValue Property="Title" String="Target Quantity"/></Record>
+				</Annotation>
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="General Information"/><PropertyValue Property="ID" String="GeneralInformation"/>
+							<PropertyValue Property="Facets">
+								<Collection>
+									<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Item Data"/><PropertyValue Property="ID" String="MaterialId"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ItemData"/></Record>
+									<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Order Price Unit"/><PropertyValue Property="ID" String="PriceUnit"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#OrderPriceUnit"/></Record>
+								</Collection>
+							</PropertyValue><Annotation Term="UI.IsSummary" Bool="true"/></Record>
+						<Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Quantity and Price"/><PropertyValue Property="ID" String="QuantityPrice"/>
+							<PropertyValue Property="Facets"><Collection/></PropertyValue><Annotation Term="UI.IsSummary" Bool="true"/></Record>
+						<Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="GR / IR Control"/><PropertyValue Property="ID" String="GRIR"/>
+							<PropertyValue Property="Facets">
+								<Collection>
+									<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String=""/><PropertyValue Property="ID" String="Tolerance"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Tolerance"/></Record>
+									<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String=""/><PropertyValue Property="ID" String="GRDetails"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GRDetails"/></Record>
+									<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String=""/><PropertyValue Property="ID" String="Invoice"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Invoice"/></Record>
+								</Collection>
+							</PropertyValue><Annotation Term="UI.IsSummary" Bool="true"/></Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Conditions"/><PropertyValue Property="ID" String="Condition"/><PropertyValue Property="Target" AnnotationPath="to_Condition/@UI.LineItem"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="GRDetails">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="taxcode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="GRIRIndicators">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Goods Receipt"/><PropertyValue Property="Value" Path="goodsreceiptisexpected"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="Invoice">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Invoice Receipt"/><PropertyValue Property="Value" Path="invoiceisexpected"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Invoice Receipt"/><PropertyValue Property="Value" Path="invoiceisgoodsreceiptbased"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="ItemData">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="purchasecontractitemtext"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="materialgroup"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="contractnetpriceamount"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="InterimPrice"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="targetquantity"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="orderpriceunit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="AdlMatDescription_VW"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="OptionalItem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="PredecessorMat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="ItmCatgProdTyp">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Service Contract Type"/><PropertyValue Property="Value" Path="ServiceCtrType"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="Material">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="materialgroup"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Material Description"/><PropertyValue Property="Value" Path="purchasecontractitemtext"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="AdlMatDescription_VW"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="PredecessorMat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="OrderPrice">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="targetquantity"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="OrderPriceUnit">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="InterimPrice"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Denominator of Conv. of Order Price Unit"/><PropertyValue Property="Value" Path="ordpriceunittoorderunitdnmntr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Numerator of Conv. of Order Price Unit"/><PropertyValue Property="Value" Path="orderpriceunittoorderunitnmrtr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="priceistobeprinted"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="OrderQuantity">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="netpricequantity"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="Tolerance">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Underdelivery Tolerance in %"/><PropertyValue Property="Value" Path="underdelivtolrtdlmtratioinpct"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Overdelivery Tolerance in %"/><PropertyValue Property="Value" Path="overdelivtolrtdlmtratioinpct"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Label" String="Unlimited Overdelivery"/><PropertyValue Property="Value" Path="unlimitedoverdeliveryisallowed"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="EBON Document Item"/><PropertyValue Property="TypeNamePlural" String="EBON Document Items"/>
+						<PropertyValue Property="Title">
+							<Record Type="UI.DataField"><PropertyValue Property="Label" String="Ebon Document Item"/>
+								<PropertyValue Property="Value" String="">
+									<Annotation Term="Core.Messages">
+										<Collection>
+											<Record><PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-001"/><PropertyValue Property="message"
+												String="Property 'CentralPurchaseContractItem' of annotation 'UI.HEADERINFO.TITLE' in proj./view '/VWKS/NLP_C_EBON_ITMTP' not found"/><PropertyValue Property="severity" String="error"/></Record>
+										</Collection>
+									</Annotation>
+								</PropertyValue>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="Description">
+							<Record Type="UI.DataField">
+								<PropertyValue Property="Value" String="">
+									<Annotation Term="Core.Messages">
+										<Collection>
+											<Record><PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-001"/><PropertyValue Property="message"
+												String="Property 'CentralPurchaseContractItem' of annotation 'UI.HEADERINFO.DESCRIPTION' in proj./view '/VWKS/NLP_C_EBON_ITMTP' not found"/><PropertyValue Property="severity" String="error"/></Record>
+										</Collection>
+									</Annotation>
+								</PropertyValue>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="centralpurchasecontractitem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="BRelease"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="BReleaseDate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="centralpurchasecontractitem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Material Description"/><PropertyValue Property="Value" Path="purchasecontractitemtext"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Interim Price"/><PropertyValue Property="Value" Path="InterimPrice"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Material Group"/><PropertyValue Property="Value" Path="materialgroup"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="OptionalItem"/><PropertyValue Property="Value" Path="OptionalItem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Target Quantity"/><PropertyValue Property="Value" Path="targetquantity"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="contractnetpriceamount"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="netpricequantity"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="orderpriceunit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem" Qualifier="MyInbox_Items">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="centralpurchasecontractitem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="OptionalItem"/><PropertyValue Property="Value" Path="OptionalItem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.C_MM_SupplierValueHelpType/SortField"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.C_MM_SupplierValueHelpType/FirstName"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.C_MM_SupplierValueHelpType/LastName"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.C_MM_SupplierValueHelpType/OrganizationBPName1"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.C_MM_SupplierValueHelpType/OrganizationBPName2"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.C_MM_SupplierValueHelpType/OrganizationBPName3"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.C_MM_SupplierValueHelpType/OrganizationBPName4"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.C_MM_SupplierValueHelpType/AuthorizationGroup"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.C_MM_SupplierValueHelpType/SupplierAccountGroup"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.C_MM_SupplierValueHelpType">
+				<Annotation Term="Communication.Contact">
+					<Record>
+						<PropertyValue Property="adr">
+							<Collection>
+								<Record><PropertyValue Property="type" EnumMember="Communication.ContactInformationType/preferred"/><PropertyValue Property="country" Path="Country"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="Communication.Address" Qualifier="pref">
+					<Record><PropertyValue Property="type" EnumMember="Communication.ContactInformationType/preferred"/><PropertyValue Property="country" Path="Country"/></Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.C_PurchasingGroupValueHelpType/EmailAddress"><Annotation Term="Communication.IsEmailAddress"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.C_PurchasingGroupValueHelpType">
+				<Annotation Term="Communication.Contact">
+					<Record>
+						<PropertyValue Property="email">
+							<Collection>
+								<Record><PropertyValue Property="address" Path="EmailAddress"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.C_PurgDocItmBlkRsnCodesVHType/Language"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.I_Supplier_VHType/AuthorizationGroup"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.I_Supplier_VHType/SupplierAccountGroup"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="VWKS.NLP_EBON_ARCHIVE_MANAGE_SRV.I_Supplier_VHType/IsBusinessPurposeCompleted"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
